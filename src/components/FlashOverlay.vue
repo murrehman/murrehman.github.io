@@ -1,5 +1,5 @@
 <template>
-  <div id="flash-overlay" ref="flashOverlay" class="fixed inset-0 flex flex-col items-center justify-center">
+  <div id="flash-overlay" ref="flashOverlay" class="fixed inset-0 flex flex-col items-center justify-center" @click="closeFlash">
     <!-- Slide 1: Intro & Skills Summary -->
     <div id="slide-1" class="flash-slide active text-center" @click="closeFlash">
       <span class="text-primary font-bold tracking-[0.2em] uppercase mb-4 animate-fade-in-up">Professional Introduction</span>
@@ -194,10 +194,10 @@ export default {
     nextSlide() {
       if (this.currentSlide < this.totalSlides) {
         this.currentSlide++;
-        this.showSlide(this.currentSlide);
       } else {
-        this.closeFlash();
+        this.currentSlide = 1;
       }
+      this.showSlide(this.currentSlide);
     },
     closeFlash() {
       if (this.flashTimer) clearInterval(this.flashTimer);

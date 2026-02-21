@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist -m 'Update portfolio text'"
+    "deploy": "gh-pages -d dist -m 'Update portfolio'"
   },
   "dependencies": {
     "lucide-vue-next": "^0.574.0",
